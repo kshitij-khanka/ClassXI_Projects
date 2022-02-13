@@ -1,0 +1,15 @@
+CREATE TABLE Clothes (
+ S_No VARCHAR(2),
+ Fruit TEXT NOT NULL,
+ Season TEXT NOT NULL,
+ Stock_Available INTEGER NOT NULL
+);
+INSERT INTO Clothes VALUES (1, 'Apple', 'Winter', 10);
+INSERT INTO Clothes VALUES (2, 'Orange', 'Winter', 13);
+INSERT INTO Clothes VALUES (3, 'Grapes', 'Winter', 9);
+INSERT INTO Clothes VALUES (4, 'Banana', 'Summer', 23);
+INSERT INTO Clothes VALUES (5, 'Lichi', 'Summer', 14);
+SELECT FRUIT FROM Clothes;
+SELECT FRUIT FROM Clothes WHERE Stock_Available > 10;
+SELECT FRUIT FROM Clothes WHERE Season = 'Winter';
+SELECT FRUIT FROM Clothes WHERE Season = 'Summer';

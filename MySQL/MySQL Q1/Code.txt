@@ -1,0 +1,18 @@
+CREATE DATABASE Customers;
+CREATE TABLE Bank (
+  Bank_id INTEGER PRIMARY KEY,
+  Cust_name TEXT NOT NULL,
+  Bank_name TEXT NOT NULL,
+  Amount INTEGER,
+  No_transaction INTEGER
+);
+INSERT INTO Bank VALUES (1, 'Amit', 'State Bank', 20000, 25);
+INSERT INTO Bank VALUES (2, 'Sunil', 'Union Bank', 25000, 20);
+INSERT INTO Bank VALUES (3, 'Nidhi', 'UCO Bank', 18000, 15);
+INSERT INTO Bank VALUES (4, 'Ashish', 'Union Bank', 10000, 22);
+INSERT INTO Bank VALUES (5, 'Suman', 'State Bank', 18500, 8);
+SELECT No_transaction FROM Bank WHERE No_transaction  > 20;
+SELECT Bank_name FROM Bank WHERE Bank_name = 'State Bank';
+SELECT COUNT(*) FROM Bank WHERE Bank_name = 'Union Bank' ;
+SELECT * FROM Bank WHERE Cust_name like '%i%' ;
+SELECT sum(Amount) FROM Bank;

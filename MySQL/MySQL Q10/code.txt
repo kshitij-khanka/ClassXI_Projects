@@ -1,0 +1,16 @@
+CREATE TABLE Clothes (
+ S_No VARCHAR(2),
+ Uniform TEXT NOT NULL,
+ Colout TEXT NOT NULL,
+ Quantity INTEGER NOT NULL,
+ Price INTEGER NOT NULL
+);
+INSERT INTO Clothes VALUES (1, 'Shirt', 'White', 156, 200);
+INSERT INTO Clothes VALUES (2, 'Pant', 'Grey', 206, 250);
+INSERT INTO Clothes VALUES (3, 'Skirt', 'Grey', 94, 250);
+INSERT INTO Clothes VALUES (4, 'Tie', 'Blue', 37, 35);
+INSERT INTO Clothes VALUES (5, 'Socks', 'Blue', 57, 40);
+INSERT INTO Clothes VALUES (6, 'Belt', 'Blue', 64, 50);
+SELECT * FROM Clothes WHERE Price = (SELECT MAX(Price) FROM Clothes);
+SELECT * FROM Clothes WHERE Price > 100;
+SELECT * FROM Clothes WHERE Price = (SELECT MIN(Price) FROM Clothes);

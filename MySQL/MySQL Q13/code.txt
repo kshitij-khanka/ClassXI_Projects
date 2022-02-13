@@ -1,0 +1,18 @@
+CREATE TABLE Accessories (
+ FURNITURE TEXT NOT NULL PRIMARY KEY,
+ QUANTITY INTEGER,
+ PROUDECED_IN TEXT NOT NULL
+);
+INSERT INTO Accessories VALUES ('Sofa Set', 125, 'Agra');
+INSERT INTO Accessories VALUES ('Kitchen Counter', 75, 'Delhi');
+INSERT INTO Accessories VALUES ('Master Bed', 35, 'Pune');
+INSERT INTO Accessories VALUES ('Wardrobe', 60, 'Agra');
+INSERT INTO Accessories VALUES ('Joint Shelves', 45, 'Hisar');
+INSERT INTO Accessories VALUES ('Dining Table', 82, 'Agra');
+INSERT INTO Accessories VALUES ('Resting Chairs', 15, 'Agra');
+INSERT INTO Accessories VALUES ('Center Pieces', 100, 'Hisar');
+INSERT INTO Accessories VALUES ('Study Table', 94, 'Pune');
+SELECT AVG(QUANTITY) AS "Average Quantity" FROM Accessories;
+SELECT FURNITURE FROM Accessories WHERE PROUDECED_IN = 'Agra';
+SELECT * FROM Accessories WHERE FURNITURE = 'Dining Table';
+

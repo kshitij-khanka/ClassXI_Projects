@@ -1,0 +1,14 @@
+CREATE TABLE Classes (
+ S_No VARCHAR(2) PRIMARY KEY,
+ Student_Quantity INTEGER NOT NULL,
+ Class TEXT NOT NULL
+);
+INSERT INTO Classes VALUES (1, 63, 'XI A');
+INSERT INTO Classes VALUES (2, 45, 'XI B');
+INSERT INTO Classes VALUES (3, 25, 'XI C');
+INSERT INTO Classes VALUES (4, 74, 'XI D');
+INSERT INTO Classes VALUES (5, 39, 'XII A');
+INSERT INTO Classes VALUES (6, 62, 'XII B');
+INSERT INTO Classes VALUES (7, 46, 'XII C');
+SELECT Class FROM Classes WHERE Student_Quantity > 50;
+SELECT AVG(Student_Quantity) AS "Average Quantity" From Classes;
