@@ -1,0 +1,17 @@
+CREATE DATABASE School;
+CREATE TABLE Teacher (
+  S_no INTEGER PRIMARY KEY,
+  Teacher_Name TEXT NOT NULL,
+  Class_appointed TEXT NOT NULL,
+  Salary INTEGER
+);
+INSERT INTO Teacher VALUES (1, 'Ankita', 'X', 24000);
+INSERT INTO Teacher VALUES (2, 'Anupam', 'XI', 30000);
+INSERT INTO Teacher VALUES (3, 'Girija', 'XII', 36000);
+INSERT INTO Teacher VALUES (4, 'Pankaj', 'X', 24000);
+INSERT INTO Teacher VALUES (5, 'Shusmita', 'XI', 30000);
+INSERT INTO Teacher VALUES (6, 'Arohi', 'X', 24000);
+SELECT * FROM Teacher WHERE Teacher_Name like 'A%';
+SELECT MAX(Salary) AS "Maximum Salary" FROM Teacher;
+SELECT MIN(Salary) AS "Minimum Salary" FROM Teacher;
+SELECT AVG(Salary) AS "Average Salary" FROM Teacher;

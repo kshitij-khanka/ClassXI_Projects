@@ -1,0 +1,15 @@
+CREATE DATABASE Competition;
+CREATE TABLE medals (
+ STATE TEXT NOT NULL PRIMARY KEY,
+ MEDALS_WON INTEGER
+);
+INSERT INTO medals VALUES ('Maharashtra', 11);
+INSERT INTO medals VALUES ('Haryana', 12);
+INSERT INTO medals VALUES ('West Bengal', 9);
+INSERT INTO medals VALUES ('Rajasthan', 7);
+INSERT INTO medals VALUES ('Odisha', 10);
+INSERT INTO medals VALUES ('Jammu and Kashmir', 8);
+INSERT INTO medals VALUES ('Madhya Pradesh', 5);
+SELECT STATE FROM medals WHERE MEDALS_WON > 10;
+SELECT STATE FROM medals WHERE MEDALS_WON >= 0;
+SELECT MAX(MEDALS_WON) AS "State Won Maximum Medals" FROM medals;

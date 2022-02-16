@@ -1,0 +1,15 @@
+CREATE TABLE Marksheet (
+ S_No INTEGER PRIMARY KEY,
+ Student_Name TEXT NOT NULL,
+ ENG_Marks INTEGER NOT NULL,
+ Maths_Marks INTEGER NOT NULL,
+ Hindi_Marks INTEGER NOT NULL,
+ EVS_Marks INTEGER NOT NULL,
+ Average FLOAT
+);
+INSERT INTO Marksheet VALUES (1, 'Arushi', 10, 5, 7, 10, 8); 
+INSERT INTO Marksheet VALUES (2, 'Mehek', 9, 7, 10, 9, 8.75); 
+INSERT INTO Marksheet VALUES (3, 'Vani', 6, 10, 9, 7, 8); 
+SELECT * FROM Marksheet WHERE Hindi_Marks = (SELECT MAX(Hindi_Marks) FROM Marksheet);
+SELECT * FROM Marksheet WHERE Average = (SELECT MAX(Average) FROM Marksheet);
+SELECT * FROM Marksheet WHERE Student_Name = 'Vani';

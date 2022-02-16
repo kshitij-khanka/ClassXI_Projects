@@ -1,0 +1,14 @@
+CREATE DATABASE Company;
+CREATE TABLE employees (
+  Employee_id INTEGER PRIMARY KEY,
+  Emp_Salary INTEGER,
+  Emp_desig TEXT NOT NULL,
+  Emp_name TEXT NOT NULL
+);
+INSERT INTO employees VALUES (1, 20000, 'Manager', 'Amod');
+INSERT INTO employees VALUES (2, 15000, 'Clerk', 'Anil');
+INSERT INTO employees VALUES (3, 27000, 'Software Designer', 'Sushila');
+INSERT INTO employees VALUES (4, 15000, 'Clerk', 'Ananta');
+INSERT INTO employees VALUES (5, 25000, 'Software Designer', 'Rakesh');
+SELECT Emp_name FROM employees WHERE Emp_Salary > 20000;
+SELECT Emp_name FROM employees WHERE Emp_desig = 'Software Designer';

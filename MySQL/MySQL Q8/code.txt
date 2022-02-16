@@ -1,0 +1,17 @@
+CREATE TABLE MOVIE (
+    MovieID INTERGER PRIMARY KEY,
+    MovieName TEXT NOT NULL,
+    Category TEXT NOT NULL,
+    ProductionCost INTEGER,
+    BusinessCost INTEGER
+);
+INSERT INTO MOVIE VALUES (001, 'Hindi_Movie', 'Musical', 124500, 130000);
+INSERT INTO MOVIE VALUES (002, 'Tamil_Movie', 'Action', 112000, 118000);
+INSERT INTO MOVIE VALUES (003, 'English_Movie', 'Horror', 245000, 360000);
+INSERT INTO MOVIE VALUES (004, 'Bengali_Movie', 'Adventure', 72000, 100000);
+INSERT INTO MOVIE VALUES (005, 'Telugu_Movie', 'Action', 100000, NULL);
+INSERT INTO MOVIE VALUES (006, 'Punjabi_Movie', 'Comedy', 30500, NULL);
+SELECT Category FROM MOVIE;
+SELECT * FROM MOVIE WHERE Category = 'Comedy' OR Category = 'Action';
+SELECT MovieName FROM MOVIE WHERE BusinessCost isnull;
+

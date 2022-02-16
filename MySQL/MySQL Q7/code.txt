@@ -1,0 +1,16 @@
+CREATE TABLE Candidate (
+  T_no INTEGER PRIMARY KEY,
+  Name TEXT NOT NULL,
+  Mobile INTEGER,
+  City TEXT NOT NULL,
+  Sex CHAR(1),
+  Fees INTEGER
+);
+INSERT INTO Candidate VALUES (101, 'Karan', 3562542, 'Delhi', 'M', 2500);
+INSERT INTO Candidate VALUES (102, 'Prakash', 3265412, 'Noida', 'M', 3000);
+INSERT INTO Candidate VALUES (103, 'Manisha', 3528978, 'Pune', 'F', 3000);
+INSERT INTO Candidate VALUES (104, 'Sonam', 3269852, 'Delhi', 'F', 1500);
+SELECT * FROM Candidate WHERE Sex = 'F';
+SELECT * FROM Candidate WHERE City = 'Delhi';
+SELECT * FROM Candidate ORDER BY Fees ASC;
+SELECT Mobile FROM Candidate WHERE Name = 'Manisha';

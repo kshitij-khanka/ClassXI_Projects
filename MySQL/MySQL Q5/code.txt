@@ -1,0 +1,17 @@
+CREATE TABLE Company;
+CREATE TABLE Job (
+  ID TEXT PRIMARY KEY,
+  city TEXT NOT NULL,
+  job_type TEXT NOT NULL
+);
+INSERT INTO Job VALUES ('J1', 'Delhi', 'Permanent');
+INSERT INTO Job VALUES ('J2', 'Goa', 'Temporary');
+INSERT INTO Job VALUES ('J3', 'Pune', 'Permanent');
+INSERT INTO Job VALUES ('J4', 'Delhi', 'Permanent');
+INSERT INTO Job VALUES ('J5', 'Delhi', 'Temporary');
+INSERT INTO Job VALUES ('J6', 'Goa', 'Temporary');
+INSERT INTO Job VALUES ('J7', 'Pune', 'Permanent');
+SELECT COUNT(*) AS "People Have Permanent Job" FROM Job WHERE job_type = 'Permanent';
+SELECT COUNT(*) AS "People Have Temporary Job" FROM Job WHERE job_type = 'Temporary';
+SELECT COUNT(*) AS "People Have Job in Delhi" FROM Job WHERE city = 'Delhi';
+
